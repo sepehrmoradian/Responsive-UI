@@ -1,0 +1,13 @@
+.bar {
+    width: 100%;
+    height: 60px;
+    background: #242424;
+    margin-bottom: 3em;
+  }
+
+.text {
+    font-size: x-large;
+    margin-top: 0;
+    padding: 10px;
+    
+}

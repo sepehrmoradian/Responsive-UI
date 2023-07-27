@@ -1,0 +1,15 @@
+/*.label {
+    margin: 5px 0px 5px 20px;
+}*/
+
+.inputBox {
+    margin: 5px 13px 5px 20px;
+    width: 45em;
+    height: 25px;
+    
+}
+
+.main {
+    margin: auto;
+    width: 40%;
+}
