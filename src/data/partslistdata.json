@@ -1,0 +1,73 @@
+[
+    {
+        "partnumber": "90987729",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BB",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v123",
+        "stcConection": "Kayshan",
+        "designOwner": "VolvoCars",
+        "stcStatus": "Connected",
+        "pdmmroom": "MIG_VC_Geely"
+    },
+    {
+        "partnumber": "90987729",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BB",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v123",
+        "stcConection": "Kayshan",
+        "designOwner": "VolvoCars",
+        "stcStatus": "Connected",
+        "pdmmroom": "MIG_VC_Polestar,MIG_Polestar_VC"
+    },{
+        "partnumber": "90987729",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BB",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v123",
+        "stcConection": "Kayshan",
+        "designOwner": "VolvoCars",
+        "stcStatus": "Connected",
+        "pdmmroom": "PDM019"
+    },
+    {
+        "partnumber": "90987729",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BB",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v123",
+        "stcConection": "Kayshan",
+        "designOwner": "VolvoCars",
+        "stcStatus": "Connected",
+        "pdmmroom": "MIG_VC_Geely"
+    },
+    {
+        "partnumber": "90987729",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BB",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v123",
+        "stcConection": "Kayshan",
+        "designOwner": "VolvoCars",
+        "stcStatus": "Connected",
+        "pdmmroom": "MIG_VC_Polestar,MIG_Polestar_VC"
+    },
+    {
+        "partnumber": "909873",
+        "partversion": "testbom",
+        "partname": "1.0",
+        "partype": "BD",
+        "partdescription": "GEely",
+        "partvalidaty": "CAD000_v32",
+        "stcConection": "2342343",
+        "designOwner": "VolvoCars",
+        "stcStatus": "UnConnected",
+        "pdmmroom": "PDM019"
+    }
+]

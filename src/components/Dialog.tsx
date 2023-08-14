@@ -6,6 +6,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { validatePerson } from "../utils/validation";
 
 interface Person {
   firstName: string;
@@ -29,17 +30,25 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
   const [firstName, setFirstName] = React.useState(person.firstName);
   const [lastName, setLastName] = React.useState(person.lastName);
   const [age, setAge] = React.useState(person.age.toString());
+  const [errors, setErrors] = React.useState<{ [key: string]: string }>({});
 
   const handleSave = () => {
-    if (firstName && lastName && age) {
-      onSave({
-        ...person,
-        firstName,
-        lastName,
-        age: parseInt(age),
-      });
+    const updatedPerson: Person = {
+      ...person,
+      firstName,
+      lastName,
+      age: parseInt(age),
+    };
+
+    const validationErrors = validatePerson(updatedPerson); // Use the validation function
+
+    if (Object.keys(validationErrors).length === 0) {
+      onSave(updatedPerson);
+      onClose();
+    } else {
+      // If there are errors, display validation messages
+      setErrors(validationErrors);
     }
-    onClose();
   };
 
   const handleClose = () => {
@@ -63,6 +72,8 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
             fullWidth
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            error={!!errors.firstName}
+            helperText={errors.firstName}
           />
           <TextField
             margin="dense"
@@ -72,6 +83,8 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
             fullWidth
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            error={!!errors.lastName}
+            helperText={errors.lastName}
           />
           <TextField
             margin="dense"
@@ -81,6 +94,8 @@ const BaseDialog: React.FC<BaseDialogProps> = ({
             fullWidth
             value={age}
             onChange={(e) => setAge(e.target.value)}
+            error={!!errors.age}
+            helperText={errors.age}
           />
         </DialogContent>
         <DialogActions>
